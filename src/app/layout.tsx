@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { Inter } from 'next/font/google'
+import ReduxProvider from '@/providers/ReduxProvider'
 import ThemeProvider from '@/providers/ThemeProvider'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -12,7 +13,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ReduxProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </ReduxProvider>
       </body>
     </html>
   )
