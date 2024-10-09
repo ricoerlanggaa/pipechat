@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <main>
       <Button type="primary">Button</Button>
+      test
     </main>
   )
 }
